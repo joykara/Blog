@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Gentium Plus', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* NAVBAR */
+header{
+    padding: 10px;
+    width: 100%;
+    z-index: 1;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#heading{
+    font-family: 'Chewy';
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    font-weight: 600px;
+    margin: 10px 0 0 50px;
+}
+#heading a{
+    text-decoration: none;
+    color: #ffffff;
+}
+#heading #icon{
+    color: #880404;
+    margin: 0 5px 0 50px;
+}
+.navbar-container #menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 1.2rem;
+}
+.navbar-container #menu li{
+    list-style-type: none;
+    margin: 0 10px;
+}
+.navbar-container #menu li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.navbar-container #menu li a:hover{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.navbar-container #menu li .search-box{
+    outline: 0;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+.navbar-container #menu li .search-icon{
+    margin-left: -30px;
+    height: 4px;
+    color: #000;
+}
+.navbar-container #menu li:nth-child(5){
+    margin-right: 30px;
+}
+#hamburger{
+    display: none;
+    cursor: pointer;
+}
+#hamburger .bar{
+    width: 25px;
+    height: 3px;
+    background-color: #fbfbfb;
+    margin: 5px 5px 5px 10px;
+    transition: all 0.3s ease;
+}
+.navbar-hamburger-container{
+    opacity: 0%;
+}
+
+/* BANNER */
+#banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -10px 50px 50px 50px;
+    padding-bottom: 50px;
+}
+#banner .banner-image{
+    width: 500px;
+    height: 500px;
+    background-image: url(/assets/images/typewriter-g859f20542_1920.jpg);
+    background-size: cover;
+    border-top-right-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+    margin-right: 50px;
+}
+#banner .banner-text{
+    width: 600px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: -50px;
+}
+#banner .banner-text h1{
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+#banner .banner-text span{
+    color: #880404;
+}
+#banner .banner-text p{
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    border-left: 2px solid #167ac3;
+    padding-left: 10px;
+    color: #ffffff;
+}
+#banner .banner-text .banner-cta{
+    text-decoration: none;
+    color: #2781c2;
+    font-size: 1.rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#banner .banner-text .banner-cta:hover{
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1080px){
+    #heading{
+        font-size: 1.5rem;
+    }
+    .navbar-container #menu li{
+        font-size: 1rem;
+    }
+    .navbar-container #menu li .search-box{
+        width: 100px;
+    }
+    .navbar-container #menu li .search-icon{
+        margin-left: -20px;
+    }
+    .navbar-hamburger-container{
+        opacity: 0%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .navbar{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .navbar-container #menu{
+        display: none;
+    }
+    #hamburger{
+        display: flex;
+        margin: 10px 30px;
+    }
+    #hamburger .search-box{
+        width: 80px;
+        outline: 0;
+        border: none;
+        border-radius: 20px;
+        padding: 5px;
+    }
+    #hamburger .search-icon{
+        margin-left: -20px;
+        height: 4px;
+        color: #000;
+    }
+    #hamburger.active .bar{
+        margin-top: -1px;
+    }
+    #hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    #hamburger.active .bar:nth-child(1){
+        transform: rotate(-45deg) translate(-4px, 15px);
+    }
+    #hamburger.active .bar:nth-child(3){
+        transform: rotate(45deg) translate(5px, -6px);
+    }
+    .navbar-hamburger-container{
+        opacity: 100%;
+    }
+    .navbar-hamburger-container #menu-hamburger {
+      display: none;
+      justify-content: right;
+      align-items: end;
+      flex-direction: column;
+      background-color: #fcfcfc;
+      padding: 2px 20px 0 0;
+      box-shadow: 0 2px 4px rgba(26, 141, 217, 0.2);
+      z-index: 6;
+    }
+    .navbar-hamburger-container #menu-hamburger li {
+      list-style-type: none;
+      width: 100%;
+      font-size: 1em;
+      padding: 5px 0 0 15px ;
+    }
+    .navbar-hamburger-container #menu-hamburger li a {
+      color: #010101;
+      text-decoration: none;
+    }
+    .navbar-hamburger-container #menu-hamburger.show {
+      display: flex;
+      overflow: hidden;
+    }
+
+    /* BANNER */
+    #banner{
+        flex-direction: column;
+        margin: 0 50px 50px 50px;
+        padding-bottom: 50px;
+    }
+    #banner .banner-image{
+        width: 100%;
+        height: 300px;
+        background-position: center;
+        border-top-right-radius: 5rem;
+        border-bottom-left-radius: 5rem;
+        margin-right: 0;
+    }
+    #banner .banner-text{
+        width: 100%;
+        height: 300px;
+        margin-top: 0;
+        padding: 0 20px;
+    }
+    #banner .banner-text h1{
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+}

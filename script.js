@@ -1,7 +1,8 @@
 // Hamburger menu toggle
 const hamburger = document.getElementById('hamburger');
-const menu = document.getElementById('menu');
+const hamburgerMenu = document.getElementById('menu-hamburger');
 
 hamburger.addEventListener('click', () => {
-  menu.classList.toggle('show');
+    hamburger.classList.toggle('active');
+    hamburgerMenu.classList.toggle('show');
 });

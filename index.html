@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Gentium+Plus:ital,wght@1,700&family=Merriweather:ital,wght@0,400;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <title>Blog</title>
 </head>
 <body>
@@ -33,23 +33,39 @@
                 </ul>
                 <!-- hamburger menu -->
                 <div id="hamburger">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
+                    <div>
+                        <input type="text" class="search-box" placeholder=" ">
+                        <a href="" class="search-icon"><i class="fas fa-search"></i></a>
+                    </div>
+                    <div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
                 </div>
             </nav>
         </div>
     </header>
+    <nav class="navbar-hamburger-container">
+        <ul id="menu-hamburger">
+            <li><a href="">Home</a></li>
+            <li><a href="">Categories</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Sign In</a></li>
+            <li><a href="">Sign Up</a></li>
+        </ul>
+    </nav>
 
     <main>
         <section id="banner">
-            <div class="container">
-                <div class="banner-text">
-                    <h1>Blog Post Title</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                    <a href="" class="banner-cta">Read More</a>
-                </div>
+            <div class="banner-image"></div>
+            <div class="banner-text">
+                <h1>Welcome to <span>BLOG!</span></h1>
+                <p>Welcome to our blog, where we explore captivating topics, share insightful stories, and provide valuable information. Whether you're seeking inspiration, knowledge, or simply a moment of relaxation, our blog is here to accompany you on your journey.</p>
+                <a href="" class="banner-cta">Read More</a>
             </div>
+        </section>
         <section id="blog-homepage">
             <div class="container">
                 <div class="blog-post">
