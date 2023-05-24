@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body{
     font-family: 'Gentium Plus', sans-serif;
@@ -127,7 +128,8 @@ header{
 #banner .banner-text .banner-cta,
 .blog-post-info .blog-post-cta{
     text-decoration: none;
-    color: #2781c2;
+    color: #167ac3;
+    width: 100px;
     font-size: 1.rem;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -136,35 +138,30 @@ header{
 .blog-post-info .blog-post-cta:hover{
     background-color: #ffffff;
     color: #000;
+    width: 100px;
     border-radius: 10px;
-    padding: 5px;
+    margin-top: 5px;
+    padding: 2px;
+    text-align: center;
 }
 
 /* BLOG-HOMEPAGE */
-.scroll-page{
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    height: 100vh;
-    width: 100%;
-    background-color: #000000;
-    color: #ffffff;
-}
 #blog-homepage{
     display: flex;
     flex-direction: column;
     box-shadow: #2781c2;
-    height: 100%;
+    height: 100vh;
 }
 #blog-homepage .section-title{
-    color: #899095;
-    font-size: 1.1rem;
+    color: #bac0c5;
+    font-size: 1rem;
     font-family: 'Merriweather';
     text-transform: uppercase;
     text-align: center;
-    margin-left: 100px;
-    width: 200px;
+    margin: 20px 100px;
+    width: 180px;
     border: 2px solid lightblue;
-    padding: 5px;
+    padding: 2px;
 }
 #blog-homepage .blog-homepage-container{
     display: flex;
@@ -175,20 +172,22 @@ header{
 .blog-homepage-container .blog-post{
     display: flex;
     flex-direction: column;
-    background-color: #fcfcfc88;
-    color: #000;
+    background-image: linear-gradient(rgba(21, 21, 21, 0.5), rgba(99, 101, 101, 0.5)), url(/assets/images/typewriter.jpg);
+    color: #cdc0c0;
     margin-right: 30px;
     padding: 10px;
     max-width: 400px;
     border-radius: 1rem;
 }
+.blog-homepage-container .blog-post:hover{
+    cursor: pointer;
+}
 .blog-post .blog-post-img img{
-    width: 90%;
+    width: 100%;
     height: 350px;
     background-size: cover;
     background-position: center;
     border-radius: 1rem;
-    margin-left: 10px;
 }
 .blog-post .blog-post-img img:nth-child(1){
     background-color: #fcfcfc;
@@ -204,9 +203,10 @@ header{
 }
 .blog-post .blog-post-info .blog-post-title{
     font-size: 2rem;
+    font-family: serif;
     font-weight: 600;
-    color: #880404;
-    margin-bottom: 10px;
+    color: #ffffff;
+    margin: 10px 0;
 }
 
 /* MEDIA QUERIES */
